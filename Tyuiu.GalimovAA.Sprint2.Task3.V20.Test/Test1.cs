@@ -1,11 +1,64 @@
-﻿namespace Tyuiu.GalimovAA.Sprint2.Task3.V20.Test
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Tyuiu.GalimovAA.Sprint2.Task3.V20.Lib;
+
+namespace Tyuiu.GalimovAA.Sprint2.Task3.V20.Test
 {
     [TestClass]
-    public sealed class Test1
+    public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidCalculateXGreaterThan1()
         {
+            DataService ds = new DataService();
+            double x = 2;
+            double wait = 18;
+            double res = ds.Calculate(x);
+            res = Math.Round(res, 3);
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void ValidCalculateXEquals0()
+        {
+            DataService ds = new DataService();
+            double x = 0;
+            double wait = 9;
+            double res = ds.Calculate(x);
+            res = Math.Round(res, 3);
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void ValidCalculateXLessThan2()
+        {
+            DataService ds = new DataService();
+            double x = 1;
+            double wait = 13.158;
+            double res = ds.Calculate(x);
+            res = Math.Round(res, 3);
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void ValidCalculateXBetweenMinus24And2()
+        {
+            DataService ds = new DataService();
+            double x = -1;
+            double wait = 0.5;
+            double res = ds.Calculate(x);
+            res = Math.Round(res, 3);
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void ValidCalculateXLessThanMinus24()
+        {
+            DataService ds = new DataService();
+            double x = -25;
+            double wait = -274.96;
+            double res = ds.Calculate(x);
+            res = Math.Round(res, 3);
+            Assert.AreEqual(wait, res);
         }
     }
 }
