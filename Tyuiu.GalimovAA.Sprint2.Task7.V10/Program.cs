@@ -9,13 +9,13 @@ namespace Tyuiu.GalimovAA.Sprint2.Task7.V10
         {
             DataService ds = new DataService();
 
-            Console.Title = "Спринт #2 | Выполнил: Галимов А. А. | ПКТ6-24-1";
+            Console.Title = "Спринт #2 | Выполнил: Галимов А. А. | ПКТб-24-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #2                                                               *");
             Console.WriteLine("* Тема: Базовые навыки работы в C#                                        *");
             Console.WriteLine("* Задание #7                                                              *");
             Console.WriteLine("* Вариант #10                                                             *");
-            Console.WriteLine("* Выполнил: Галимов Артём Азатович | ПКТ6-24-1                            *");
+            Console.WriteLine("* Выполнил: Галимов Артём Азатович | ПКТб-24-1                            *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Написать программу, которая запрашивает исходные данные                 *");

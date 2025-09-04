@@ -9,10 +9,10 @@ namespace Tyuiu.GalimovAA.Sprint2.Task7.V10.Test
         [TestMethod]
         public void ValidCheckDotInShadedArea1()
         {
-            // Точка внутри заштрихованной области (0, -1.5)
+            // Точка внутри области (0, 0)
             DataService ds = new DataService();
             double x = 0;
-            double y = -1.5;
+            double y = 0;
             bool res = ds.CheckDotInShadedArea(x, y);
             bool wait = true;
             Assert.AreEqual(wait, res);
@@ -45,7 +45,7 @@ namespace Tyuiu.GalimovAA.Sprint2.Task7.V10.Test
         [TestMethod]
         public void ValidCheckDotInShadedArea4()
         {
-            // Точка вне области (2, 2) - выше параболы
+            // Точка вне области (2, 2) - выше обеих прямых
             DataService ds = new DataService();
             double x = 2;
             double y = 2;
@@ -57,10 +57,10 @@ namespace Tyuiu.GalimovAA.Sprint2.Task7.V10.Test
         [TestMethod]
         public void ValidCheckDotInShadedArea5()
         {
-            // Точка вне области (0, 1) - выше параболы
+            // Точка вне области (0, -3) - ниже параболы
             DataService ds = new DataService();
             double x = 0;
-            double y = 1;
+            double y = -3;
             bool res = ds.CheckDotInShadedArea(x, y);
             bool wait = false;
             Assert.AreEqual(wait, res);
@@ -69,12 +69,12 @@ namespace Tyuiu.GalimovAA.Sprint2.Task7.V10.Test
         [TestMethod]
         public void ValidCheckDotInShadedArea6()
         {
-            // Точка вне области (-1, -2) - ниже прямой y = -x
+            // Точка (0.4, -1.5) - должна быть в области
             DataService ds = new DataService();
-            double x = -1;
-            double y = -2;
+            double x = 0.4;
+            double y = -1.5;
             bool res = ds.CheckDotInShadedArea(x, y);
-            bool wait = false;
+            bool wait = true;
             Assert.AreEqual(wait, res);
         }
     }
