@@ -5,14 +5,10 @@ namespace Tyuiu.GalimovAA.Sprint2.Task7.V10.Lib
     {
         public bool CheckDotInShadedArea(double x, double y)
         {
-            // Проверяем, находится ли точка в заштрихованной области
-            // Область ограничена параболой y = x^2 - 2 и прямыми y = x и y = -x
-
-            bool belowParabola = y <= (x * x - 2);     // Ниже или на параболе
-            bool aboveLine1 = y >= x;                  // Выше или на прямой y = x
-            bool aboveLine2 = y >= -x;                 // Выше или на прямой y = -x
-
-            return belowParabola && aboveLine1 && aboveLine2;
+            bool belowParabola = y <= (x * x - 2);     
+            bool aboveLineX = y >= x;                  
+            bool aboveLineMinusX = y >= -x;            
+            return belowParabola && aboveLineX && aboveLineMinusX;
         }
     }
 }
