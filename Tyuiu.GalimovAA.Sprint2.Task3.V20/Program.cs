@@ -13,7 +13,7 @@ namespace Tyuiu.GalimovAA.Sprint2.Task3.V20
             Console.WriteLine("* Тема: Вложенные операторы if - else                                     *");
             Console.WriteLine("* Задание #3                                                              *");
             Console.WriteLine("* Вариант #20                                                             *");
-            Console.WriteLine("* Выполнил: Галимов Артём Азатович | ПКТб-24-1                          *");
+            Console.WriteLine("* Выполнил: Галимов Артём Азатович | ПКТб-24-1                            *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Написать программу, которая вычисляет требуемое значение функции Y      *");
