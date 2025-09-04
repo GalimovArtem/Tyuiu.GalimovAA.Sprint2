@@ -1,4 +1,6 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint2;
+﻿using System;
+using tyuiu.cources.programming.interfaces.Sprint2;
+
 namespace Tyuiu.GalimovAA.Sprint2.Task5.V12.Lib
 {
     public class DataService : ISprint2Task5V12
@@ -31,7 +33,8 @@ namespace Tyuiu.GalimovAA.Sprint2.Task5.V12.Lib
                 prevDay = GetDaysInMonth(prevMonth, prevYear);
             }
 
-            return $"{prevYear}.{prevMonth:D2}.{prevDay:D2}";
+            // Форматируем в нужный формат "DD.MM.YYYY"
+            return $"{prevDay:D2}.{prevMonth:D2}.{prevYear}";
         }
 
         private int GetDaysInMonth(int month, int year)
