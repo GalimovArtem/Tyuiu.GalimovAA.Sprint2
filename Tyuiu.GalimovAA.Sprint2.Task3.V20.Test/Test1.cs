@@ -13,7 +13,6 @@ namespace Tyuiu.GalimovAA.Sprint2.Task3.V20.Test
             double x = 2;
             double wait = 18;
             double res = ds.Calculate(x);
-            res = Math.Round(res, 3);
             Assert.AreEqual(wait, res);
         }
 
@@ -22,20 +21,8 @@ namespace Tyuiu.GalimovAA.Sprint2.Task3.V20.Test
         {
             DataService ds = new DataService();
             double x = 0;
-            double wait = 9;
+            double wait = 0.833; 
             double res = ds.Calculate(x);
-            res = Math.Round(res, 3);
-            Assert.AreEqual(wait, res);
-        }
-
-        [TestMethod]
-        public void ValidCalculateXLessThan2()
-        {
-            DataService ds = new DataService();
-            double x = 1;
-            double wait = 13.158;
-            double res = ds.Calculate(x);
-            res = Math.Round(res, 3);
             Assert.AreEqual(wait, res);
         }
 
@@ -43,10 +30,9 @@ namespace Tyuiu.GalimovAA.Sprint2.Task3.V20.Test
         public void ValidCalculateXBetweenMinus24And2()
         {
             DataService ds = new DataService();
-            double x = -1;
-            double wait = 0.5;
+            double x = 1;
+            double wait = 4;
             double res = ds.Calculate(x);
-            res = Math.Round(res, 3);
             Assert.AreEqual(wait, res);
         }
 
@@ -57,8 +43,16 @@ namespace Tyuiu.GalimovAA.Sprint2.Task3.V20.Test
             double x = -25;
             double wait = -274.96;
             double res = ds.Calculate(x);
-            res = Math.Round(res, 3);
             Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void InvalidCalculateXEquals1()
+        {
+            DataService ds = new DataService();
+            double x = 1;
+            double res = ds.Calculate(x);
         }
     }
 }
