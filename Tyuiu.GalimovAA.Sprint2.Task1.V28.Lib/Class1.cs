@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using tyuiu.cources.programming.interfaces.Sprint2;
 namespace Tyuiu.GalimovAA.Sprint2.Task1.V28.Lib
 {
-    public class DataService
+    public class DataService : ISprint2Task1V28
     {
-        public bool[] GetCompareOperations(int a, int b, int c, int d)
+        public bool[] GetLogicOperations(int a, int b, int c, int d)
         {
             bool[] res = new bool[6];
-
-            // Операции сравнения в заданной последовательности
             res[0] = a == b;      // =
             res[1] = c != d;      // !=
             res[2] = a < b;       // <

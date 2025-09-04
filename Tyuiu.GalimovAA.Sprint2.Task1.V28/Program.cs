@@ -14,7 +14,7 @@ namespace Tyuiu.GalimovAA.Sprint2.Task1.V28
             int d = 671;
 
             bool[] res = new bool[6];
-            res = ds.GetCompareOperations(a, b, c, d);
+            res = ds.GetLogicOperations(a, b, c, d);
 
             Console.Title = "Спринт #2 | Выполнил: Галимов А.А. | ПКТб-24-1";
             Console.WriteLine("******************************************************************************");
