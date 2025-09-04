@@ -41,7 +41,7 @@ namespace Tyuiu.GalimovAA.Sprint2.Task5.V12
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            string result = ds.FindDateOfPreviousDay(g, m, n);
+            string result = ds.FindDateOfPreviousDay(n, m, g);
             Console.WriteLine($"Дата предыдущего дня: {result}");
 
             Console.ReadKey();
