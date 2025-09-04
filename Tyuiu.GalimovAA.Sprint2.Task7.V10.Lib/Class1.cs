@@ -9,7 +9,10 @@ namespace Tyuiu.GalimovAA.Sprint2.Task7.V10.Lib
             // и МЕЖДУ прямыми y = x и y = -x
 
             bool aboveParabola = y >= (x * x - 2);     // Выше или на параболе
-            bool betweenLines = Math.Abs(y) <= Math.Abs(x); // Между прямыми
+
+            // Для области между прямыми y = x и y = -x
+            // Это эквивалентно: -|x| <= y <= |x|
+            bool betweenLines = (y >= -Math.Abs(x)) && (y <= Math.Abs(x));
 
             return aboveParabola && betweenLines;
         }
